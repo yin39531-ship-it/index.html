@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Website</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #2196f3;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    input, button {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      background: #2196f3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My First Website</h1>
+  <p>សូមស្វាគមន៍មកកាន់វេបសាយរបស់ខ្ញុំ</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+  <h2>About Me</h2>
+  <p>ខ្ញុំកំពុងរៀន Web Development ហើយនេះជាវេបសាយតូចដំបូងរបស់ខ្ញុំ។</p>
+
+  <h2>Contact Me</h2>
+  <form onsubmit="sendData(); return false;">
+    <input type="text" id="name" placeholder="ឈ្មោះ" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="result"></p>
+</div>
+
+<footer>
+  © 2026 My Website
+</footer>
+
+<script>
+  function sendData() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    document.getElementById("result").innerHTML =
+      "អរគុណ " + name + " 🙏 យើងនឹងទាក់ទងទៅ " + email;
+  }
+</script>
+
+</body>
+</html>
